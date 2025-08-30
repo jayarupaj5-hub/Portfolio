@@ -1,0 +1,667 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 5%;
+  background: #04308d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 28px;
+  color: #10011f;
+  text-decoration: none;
+  font-weight: 700;
+  animation: slideRight 1s ease forwards;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: color 0.3s;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #10b981;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  display: flex;
+  align-items: center;
+  padding: 100px 5% 50px;
+  color: #ffffff;
+  /* margin-left: 15rem; */
+}
+
+.home-content {
+  max-width: 700px;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+  color: #10011f;
+}
+
+.home-content p {
+  font-size: 18px;
+  margin: 20px 0 40px;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #070707f3;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #130000;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.5s;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.home-sci a:hover {
+  background: #10b981;
+  color: #270479;
+  border-color: #10b981;
+  box-shadow: 0 0 10px #10b981;
+}
+
+.btn-box {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #10b981;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-box:hover {
+  background: #059669;
+  box-shadow: 0 0 10px #059669;
+}
+
+.about {
+  padding: 80px 5%;
+  background: #ffffff;
+}
+
+.about-text h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.about-text h2 span {
+  color: #10b981;
+}
+
+.about-text h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 10px 0 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.skills {
+  padding: 80px 5%;
+  background: #f3f4f6;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 50px;
+}
+
+.sub-title span {
+  color: #10b981;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 40px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+}
+
+.technical-bars .bar {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.technical-bars .bar i {
+  font-size: 30px;
+}
+
+.technical-bars .bar .info span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.technical-bars .bar .progress-line {
+  flex: 1;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.technical-bars .bar .progress-line span {
+  height: 100%;
+  background: #10b981;
+  border-radius: 10px;
+  animation: grow 1s ease forwards;
+}
+
+.progress-line.html span {
+  width: 90%;
+}
+
+.progress-line.css span {
+  width: 80%;
+}
+
+.progress-line.javascript span {
+  width: 85%;
+}
+
+.progress-line.python span {
+  width: 70%;
+}
+
+.progress-line.react span {
+  width: 75%;
+}
+
+.progress-line span::after {
+  content: attr(data-progress);
+  position: absolute;
+  padding: 2px 8px;
+  background: #1e3a8a;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+.progress-line.html span::after {
+  content: "90%";
+}
+
+.progress-line.css span::after {
+  content: "80%";
+}
+
+.progress-line.javascript span::after {
+  content: "85%";
+}
+
+.progress-line.python span::after {
+  content: "70%";
+}
+
+.progress-line.react span::after {
+  content: "75%";
+}
+
+.services {
+  padding: 80px 5%;
+  background: #ffffff;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-list div {
+  background: #f3f4f6;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.services-list div i {
+  font-size: 40px;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.services-list div h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.services-list div p {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.services-list div .read {
+  background: #10b981;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.services-list div .read:hover {
+  background: #059669;
+}
+
+.services-list div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+  padding: 80px 5%;
+  background: #f3f4f6;
+  text-align: center;
+}
+
+.contact-links {
+  margin-top: 30px;
+}
+
+.footer {
+  padding: 20px 5%;
+  background: #1e3a8a;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  to {
+    width: var(--width);
+  }
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .header {
+    padding: 15px 5%;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+  .home {
+    padding: 80px 5% 50px;
+    min-height: 80vh;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 40px;
+  }
+
+  .home-content h3 {
+    font-size: 24px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+  }
+
+  .about-text h2 {
+    font-size: 36px;
+  }
+
+  .about-text h4 {
+    font-size: 20px;
+  }
+
+  .services-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #1e3a8a;
+    padding: 20px;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  .home {
+    padding: 60px 5%;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .btn-box {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .about {
+    padding: 40px 5%;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .sub-title {
+    font-size: 36px;
+  }
+
+  .services {
+    padding: 40px 5%;
+  }
+
+  .services-list div {
+    padding: 20px;
+  }
+
+  .skills {
+    padding: 40px 5%;
+  }
+
+  .technical-bars .bar i {
+    font-size: 24px;
+  }
+
+  .technical-bars .bar .info span {
+    font-size: 16px;
+  }
+}
+/* General styles (assumed existing styles) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+.skills {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.sub-title span {
+  color: #007bff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.technical-bars .bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.technical-bars .bar i {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.technical-bars .info {
+  flex: 1;
+  text-align: left;
+}
+
+.technical-bars .info span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.progress-line {
+  flex: 3;
+  height: 10px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-line span {
+  display: block;
+  height: 100%;
+  background: #007bff;
+  transition: width 1s ease-in-out;
+}
+
+.progress-line.html span {
+  width: 90%;
+}
+
+.progress-line.css span {
+  width: 85%;
+}
+
+.progress-line.javascript span {
+  width: 80%;
+}
+
+.progress-line.python span {
+  width: 85%;
+}
+
+.progress-line.react span {
+  width: 80%;
+}
+
+.percentage {
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .technical-bars .bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .progress-line {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .percentage {
+    margin-left: 0;
+  }
+}

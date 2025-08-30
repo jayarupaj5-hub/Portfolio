@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jayarupa's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="#home" class="logo"><span>Jayarupa's Portfolio</span></a>
+      <div class="hamburger">
+        <i class="bx bx-menu"></i>
+      </div>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hey, I'm</h3>
+        <h1>Jayarupa</h1>
+        <p>
+          I'm a passionate Full Stack Developer creating dynamic and responsive
+          web applications with a focus on user experience and clean code.
+        </p>
+        <div class="home-sci">
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-whatsapp"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="about-text">
+        <h2>About <span>Me</span></h2>
+        <h4>Full Stack Developer</h4>
+        <p>
+          I'm a skilled web designer and front-end developer with expertise in
+          HTML, CSS, JavaScript, Python, and React. I create dynamic, responsive
+          interfaces that meet client needs and deliver seamless user experiences.
+        </p>
+        <a href="#contact" class="btn-box">Contact Me</a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+      <h1 class="sub-title">My <span>Skills</span></h1>
+      <div class="container">
+        <h1 class="heading">Technical Skills</h1>
+        <div class="technical-bars">
+          <div class="bar">
+            <i class="bx bxl-html5" style="color: #e34c26"></i>
+            <div class="info"><span>HTML</span></div>
+            <div class="progress-line html"><span data-percentage="90%"></span></div>
+            <div class="percentage">90%</div>
+          </div>
+          <div class="bar">
+            <i class="bx bxl-css3" style="color: #264de4"></i>
+            <div class="info"><span>CSS</span></div>
+            <div class="progress-line css"><span data-percentage="85%"></span></div>
+            <div class="percentage">85%</div>
+          </div>
+          <div class="bar">
+            <i class="bx bxl-javascript" style="color: #f0db4f"></i>
+            <div class="info"><span>JavaScript</span></div>
+            <div class="progress-line javascript"><span data-percentage="80%"></span></div>
+            <div class="percentage">80%</div>
+          </div>
+          <div class="bar">
+            <i class="bx bxl-python" style="color: #3572a5"></i>
+            <div class="info"><span>Python</span></div>
+            <div class="progress-line python"><span data-percentage="85%"></span></div>
+            <div class="percentage">85%</div>
+          </div>
+          <div class="bar">
+            <i class="bx bxl-react" style="color: #61dafb"></i>
+            <div class="info"><span>React</span></div>
+            <div class="progress-line react"><span data-percentage="80%"></span></div>
+            <div class="percentage">80%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <h1 class="sub-title">My <span>Services</span></h1>
+      <div class="services-list">
+        <div>
+          <i class="bx bx-code"></i>
+          <h2>UI/UX Design</h2>
+          <p>
+            I design intuitive and user-friendly interfaces for web and mobile
+            applications using tools like Adobe Creative Suite, Sketch, and
+            InVision.
+          </p>
+          <a href="#" class="read">Learn More</a>
+        </div>
+        <div>
+          <i class="bx bx-crop"></i>
+          <h2>Web Development</h2>
+          <p>
+            I build responsive and dynamic websites with clean code, ensuring
+            seamless user experiences across all devices.
+          </p>
+          <a href="#" class="read">Learn More</a>
+        </div>
+        <div>
+          <i class="bx bxl-apple"></i>
+          <h2>App Design</h2>
+          <p>
+            I create engaging and intuitive mobile app interfaces, ensuring smooth
+            usability across devices.
+          </p>
+          <a href="#" class="read">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact (Placeholder) -->
+    <section class="contact" id="contact">
+      <h1 class="sub-title">Contact <span>Me</span></h1>
+      <p>Reach out to me via email or social media!</p>
+      <div class="contact-links">
+        <a href="mailto:example@email.com" class="btn-box">Email Me</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Jayarupa. All rights reserved.</p>
+      <div class="home-sci">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-whatsapp"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      // Hamburger menu toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navbar = document.querySelector(".navbar");
+
+      hamburger.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+      });
+
+      // Typed.js for animated text (optional)
+      const typed = new Typed(".home-content h1", {
+        strings: ["Jayarupa", "Full Stack Developer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
